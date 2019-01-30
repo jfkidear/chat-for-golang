@@ -1,0 +1,106 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddClient	chat_server/main/clien_mgr.go	/^func (p *ClientMgr) AddClient(userId int, client *Client) {$/;"	f
+Client	chat_server/main/client.go	/^type Client struct {$/;"	t
+ClientMgr	chat_server/main/clien_mgr.go	/^type ClientMgr struct {$/;"	t
+DelClient	chat_server/main/clien_mgr.go	/^func (p *ClientMgr) DelClient(userId int) {$/;"	f
+ErrInvalidParams	chat_server/model/error.go	/^	ErrInvalidParams = errors.New("Invalid params")$/;"	v
+ErrInvalidPasswd	chat_server/model/error.go	/^	ErrInvalidPasswd = errors.New("Passwd or username not right")$/;"	v
+ErrUserExist	chat_server/model/error.go	/^	ErrUserExist     = errors.New("user exist")$/;"	v
+ErrUserNotExist	chat_server/model/error.go	/^	ErrUserNotExist  = errors.New("user not exist")$/;"	v
+GetAllUsers	chat_server/main/clien_mgr.go	/^func (p *ClientMgr) GetAllUsers() map[int]*Client {$/;"	f
+GetClient	chat_server/main/clien_mgr.go	/^func (p *ClientMgr) GetClient(userId int) (client *Client, err error) {$/;"	f
+GetConn	chat_server/main/redis.go	/^func GetConn() redis.Conn {$/;"	f
+Login	chat_server/model/mgr.go	/^func (p *UserMgr) Login(id int, passwd string) (user *common.User, err error) {$/;"	f
+LoginCmd	proto/proto.go	/^type LoginCmd struct {$/;"	t
+LoginCmdRes	proto/proto.go	/^type LoginCmdRes struct {$/;"	t
+Message	proto/proto.go	/^type Message struct {$/;"	t
+NewUserMgr	chat_server/model/mgr.go	/^func NewUserMgr(pool *redis.Pool) (mgr *UserMgr) {$/;"	f
+NotifyOthersUserOnline	chat_server/main/client.go	/^func (p *Client) NotifyOthersUserOnline(userId int) {$/;"	f
+NotifyUserOnline	chat_server/main/client.go	/^func (p *Client) NotifyUserOnline(userId int) {$/;"	f
+Process	chat_server/main/client.go	/^func (p *Client) Process() (err error) {$/;"	f
+PutConn	chat_server/main/redis.go	/^func PutConn(conn redis.Conn) {$/;"	f
+Register	chat_server/model/mgr.go	/^func (p *UserMgr) Register(user *common.User) (err error) {$/;"	f
+RegisterCmd	proto/proto.go	/^type RegisterCmd struct {$/;"	t
+SendMessageToUser	chat_server/main/client.go	/^func (p *Client) SendMessageToUser(userId int, text string) {$/;"	f
+SendMessageToUserP2P	chat_server/main/client.go	/^func (p *Client) SendMessageToUserP2P(userId int, text string) {$/;"	f
+User	common/user.go	/^type User struct {$/;"	t
+UserLogin	proto/const.go	/^	UserLogin           = "user_login"$/;"	c
+UserLoginRes	proto/const.go	/^	UserLoginRes        = "user_login_res"$/;"	c
+UserMgr	chat_server/model/mgr.go	/^type UserMgr struct {$/;"	t
+UserOffline	proto/const.go	/^	UserOffline = 2$/;"	c
+UserOnline	proto/const.go	/^	UserOnline  = 1$/;"	c
+UserRecvMessageCmd	proto/const.go	/^	UserRecvMessageCmd  = "user_recv_message"$/;"	c
+UserRecvMessageP2PCmd	proto/const.go	/^        UserRecvMessageP2PCmd  = "user_recv_message_p2p"$/;"	c
+UserRecvMessageP2PReq	proto/proto.go	/^type UserRecvMessageP2PReq struct {$/;"	t
+UserRecvMessageReq	proto/proto.go	/^type UserRecvMessageReq struct {$/;"	t
+UserRegister	proto/const.go	/^	UserRegister        = "user_register"$/;"	c
+UserSendMessageCmd	proto/const.go	/^	UserSendMessageCmd  = "user_send_message"$/;"	c
+UserSendMessageP2PCmd	proto/const.go	/^        UserSendMessageP2PCmd  = "user_send_message_p2p"$/;"	c
+UserSendMessageP2PReq	proto/proto.go	/^type UserSendMessageP2PReq struct {$/;"	t
+UserSendMessageReq	proto/proto.go	/^type UserSendMessageReq struct {$/;"	t
+UserStatusNotify	proto/proto.go	/^type UserStatusNotify struct {$/;"	t
+UserStatusNotifyRes	proto/const.go	/^	UserStatusNotifyRes = "user_status_notify"$/;"	c
+UserStatusOffline	common/user.go	/^	UserStatusOffline = iota$/;"	c
+UserStatusOnline	common/user.go	/^	UserStatusOnline  = 1$/;"	c
+UserTable	chat_server/model/mgr.go	/^	UserTable = "users"$/;"	v
+clientMgr	chat_server/main/clien_mgr.go	/^	clientMgr *ClientMgr$/;"	v
+common	common/user.go	/^package common$/;"	p
+enterMenu	chat_client/logic.go	/^func enterMenu(conn net.Conn) {$/;"	f
+enterTalk	chat_client/logic.go	/^func enterTalk(conn net.Conn) {$/;"	f
+getUser	chat_server/model/mgr.go	/^func (p *UserMgr) getUser(conn redis.Conn, id int) (user *common.User, err error) {$/;"	f
+init	chat_client/main.go	/^func init() {$/;"	f
+init	chat_server/main/clien_mgr.go	/^func init() {$/;"	f
+initRedis	chat_server/main/redis.go	/^func initRedis(addr string, idleConn, maxConn int, idleTimeout time.Duration) {$/;"	f
+initUserMgr	chat_server/main/user_mgr.go	/^func initUserMgr() {$/;"	f
+listUnReadMsg	chat_client/logic.go	/^func listUnReadMsg() {$/;"	f
+logic	chat_client/logic.go	/^func logic(conn net.Conn) {$/;"	f
+login	chat_client/login.go	/^func login(conn net.Conn, userId int, passwd string) (err error) {$/;"	f
+login	chat_server/main/client.go	/^func (p *Client) login(msg proto.Message) (err error) {$/;"	f
+loginResp	chat_server/main/client.go	/^func (p *Client) loginResp(err error) {$/;"	f
+main	chat_client/logic.go	/^package main$/;"	p
+main	chat_client/login.go	/^package main$/;"	p
+main	chat_client/main.go	/^func main() {$/;"	f
+main	chat_client/main.go	/^package main$/;"	p
+main	chat_client/register.go	/^package main$/;"	p
+main	chat_client/sever.go	/^package main$/;"	p
+main	chat_client/user_mgr.go	/^package main$/;"	p
+main	chat_client/util.go	/^package main$/;"	p
+main	chat_server/main/clien_mgr.go	/^package main$/;"	p
+main	chat_server/main/client.go	/^package main$/;"	p
+main	chat_server/main/main.go	/^func main() {$/;"	f
+main	chat_server/main/main.go	/^package main$/;"	p
+main	chat_server/main/redis.go	/^package main$/;"	p
+main	chat_server/main/server.go	/^package main$/;"	p
+main	chat_server/main/user_mgr.go	/^package main$/;"	p
+mgr	chat_server/main/user_mgr.go	/^	mgr *model.UserMgr$/;"	v
+model	chat_server/model/error.go	/^package model$/;"	p
+model	chat_server/model/mgr.go	/^package model$/;"	p
+msgChan	chat_client/main.go	/^var msgChan chan proto.UserRecvMessageReq$/;"	v
+onlineUserMap	chat_client/user_mgr.go	/^var onlineUserMap map[int]*common.User = make(map[int]*common.User, 16)$/;"	v
+outputUserOnline	chat_client/user_mgr.go	/^func outputUserOnline() {$/;"	f
+p2pChat	chat_client/logic.go	/^func p2pChat(conn net.Conn){$/;"	f
+passwd	chat_client/main.go	/^var passwd string$/;"	v
+pool	chat_server/main/redis.go	/^var pool *redis.Pool$/;"	v
+proccess	chat_server/main/server.go	/^func proccess(conn net.Conn) {$/;"	f
+proccessUserSendMessage	chat_server/main/client.go	/^func (p *Client) proccessUserSendMessage(msg proto.Message) (err error) {$/;"	f
+proccessUserSendMessageP2P	chat_server/main/client.go	/^func (p *Client) proccessUserSendMessageP2P(msg proto.Message) (err error) {$/;"	f
+processMsg	chat_server/main/client.go	/^func (p *Client) processMsg(msg proto.Message) (err error) {$/;"	f
+processServerMessage	chat_client/sever.go	/^func processServerMessage(conn net.Conn) {$/;"	f
+proto	proto/const.go	/^package proto$/;"	p
+proto	proto/proto.go	/^package proto$/;"	p
+readPackage	chat_client/util.go	/^func readPackage(conn net.Conn) (msg proto.Message, err error) {$/;"	f
+readPackage	chat_server/main/client.go	/^func (p *Client) readPackage() (msg proto.Message, err error) {$/;"	f
+recvMessageFromServer	chat_client/sever.go	/^func recvMessageFromServer(msg proto.Message) {$/;"	f
+register	chat_client/register.go	/^func register(conn net.Conn, userId int, passwd string) (err error) {$/;"	f
+register	chat_server/main/client.go	/^func (p *Client) register(msg proto.Message) (err error) {$/;"	f
+runServer	chat_server/main/server.go	/^func runServer(addr string) (err error) {$/;"	f
+sendTextMessage	chat_client/logic.go	/^func sendTextMessage(conn net.Conn, text string) (err error) {$/;"	f
+sendTextMessageP2P	chat_client/logic.go	/^func sendTextMessageP2P(conn net.Conn, to int, text string) (err error) {$/;"	f
+updateUserStatus	chat_client/user_mgr.go	/^func updateUserStatus(userStatus proto.UserStatusNotify) {$/;"	f
+userId	chat_client/main.go	/^var userId int$/;"	v
+writePackage	chat_server/main/client.go	/^func (p *Client) writePackage(data []byte) (err error) {$/;"	f
