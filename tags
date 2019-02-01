@@ -15,11 +15,11 @@ ErrUserNotExist	chat_server/model/error.go	/^	ErrUserNotExist  = errors.New("use
 GetAllUsers	chat_server/main/clien_mgr.go	/^func (p *ClientMgr) GetAllUsers() map[int]*Client {$/;"	f
 GetClient	chat_server/main/clien_mgr.go	/^func (p *ClientMgr) GetClient(userId int) (client *Client, err error) {$/;"	f
 GetConn	chat_server/main/redis.go	/^func GetConn() redis.Conn {$/;"	f
-Login	chat_server/model/mgr.go	/^func (p *UserMgr) Login(id int, passwd string) (user *common.User, err error) {$/;"	f
+Login	chat_server/model/mgr.go	/^func (p *UserMgr) Login(id int, passwd string) (user []common.User, err error) {$/;"	f
 LoginCmd	proto/proto.go	/^type LoginCmd struct {$/;"	t
 LoginCmdRes	proto/proto.go	/^type LoginCmdRes struct {$/;"	t
 Message	proto/proto.go	/^type Message struct {$/;"	t
-NewUserMgr	chat_server/model/mgr.go	/^func NewUserMgr(pool *redis.Pool) (mgr *UserMgr) {$/;"	f
+NewUserMgr	chat_server/model/mgr.go	/^func NewUserMgr(db *sqlx.DB) (mgr *UserMgr) {$/;"	f
 NotifyOthersUserOnline	chat_server/main/client.go	/^func (p *Client) NotifyOthersUserOnline(userId int) {$/;"	f
 NotifyUserOnline	chat_server/main/client.go	/^func (p *Client) NotifyUserOnline(userId int) {$/;"	f
 Process	chat_server/main/client.go	/^func (p *Client) Process() (err error) {$/;"	f
@@ -50,11 +50,13 @@ UserStatusOnline	common/user.go	/^	UserStatusOnline  = 1$/;"	c
 UserTable	chat_server/model/mgr.go	/^	UserTable = "users"$/;"	v
 clientMgr	chat_server/main/clien_mgr.go	/^	clientMgr *ClientMgr$/;"	v
 common	common/user.go	/^package common$/;"	p
+db	chat_server/main/mysql.go	/^var db *sqlx.DB$/;"	v
 enterMenu	chat_client/logic.go	/^func enterMenu(conn net.Conn) {$/;"	f
 enterTalk	chat_client/logic.go	/^func enterTalk(conn net.Conn) {$/;"	f
-getUser	chat_server/model/mgr.go	/^func (p *UserMgr) getUser(conn redis.Conn, id int) (user *common.User, err error) {$/;"	f
+getUser	chat_server/model/mgr.go	/^func (p *UserMgr) getUser(id int) (user []common.User, err error) {$/;"	f
 init	chat_client/main.go	/^func init() {$/;"	f
 init	chat_server/main/clien_mgr.go	/^func init() {$/;"	f
+initMysql	chat_server/main/mysql.go	/^func initMysql() {$/;"	f
 initRedis	chat_server/main/redis.go	/^func initRedis(addr string, idleConn, maxConn int, idleTimeout time.Duration) {$/;"	f
 initUserMgr	chat_server/main/user_mgr.go	/^func initUserMgr() {$/;"	f
 listUnReadMsg	chat_client/logic.go	/^func listUnReadMsg() {$/;"	f
@@ -74,6 +76,7 @@ main	chat_server/main/clien_mgr.go	/^package main$/;"	p
 main	chat_server/main/client.go	/^package main$/;"	p
 main	chat_server/main/main.go	/^func main() {$/;"	f
 main	chat_server/main/main.go	/^package main$/;"	p
+main	chat_server/main/mysql.go	/^package main$/;"	p
 main	chat_server/main/redis.go	/^package main$/;"	p
 main	chat_server/main/server.go	/^package main$/;"	p
 main	chat_server/main/user_mgr.go	/^package main$/;"	p

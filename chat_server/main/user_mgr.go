@@ -7,6 +7,6 @@ var (
 )
 
 func initUserMgr() {
-	mgr = model.NewUserMgr(pool)
+	mgr = model.NewUserMgr(db)
 }
 
